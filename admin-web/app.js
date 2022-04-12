@@ -41,6 +41,7 @@ app.use(function (req, res, next) {
 
 app.use("/", indexRouter);
 app.use("/", authenticationRouter);
+
 app.use("/orderlist", orderlistRouter);
 app.use("/post", postRouter);
 app.use("/signup", signupRouter);

@@ -5,19 +5,24 @@ exports.registerShow = (req, res, next) => {
 };
 
 exports.register = async function (req, res) {
-  await authenticationService.register(
-    req.body.username,
-    req.body.password,
-    req.body.email
-  );
+  const {username, email, password}=req.body;
+  const user=await authenticationService.isUserExist(email);
+  if (user){
+    res.render("./authentication/register",{
+      title: 'Register',
+      error: 'User already exist!',
+    });
+    return;
+  }
+  await authenticationService.register(username,password,email);
 
   res.redirect("/login");
 };
 
 exports.loginShow = (req, res, next) => {
   if (req.user) {
-    res.redirect("/");
+    res.redirect("/list");
   } else {
-    res.render("authentication/login");
+    res.render("/list");
   }
 };

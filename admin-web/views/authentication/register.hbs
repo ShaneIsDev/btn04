@@ -1,9 +1,11 @@
 <!-- start loader -->
-<div id="pageloader-overlay" class="visible incoming"><div
-    class="loader-wrapper-outer"
-  ><div class="loader-wrapper-inner"><div
-        class="loader"
-      ></div></div></div></div>
+<div id="pageloader-overlay" class="visible incoming">
+  <div class="loader-wrapper-outer">
+    <div class="loader-wrapper-inner">
+      <div class="loader"></div>
+    </div>
+  </div>
+</div>
 <!-- end loader -->
 
 <!-- Start wrapper-->
@@ -20,13 +22,8 @@
           <div class="form-group">
             <label for="exampleInputName" class="sr-only">Name</label>
             <div class="position-relative has-icon-right">
-              <input
-                type="text"
-                id="exampleInputName"
-                class="form-control input-shadow"
-                placeholder="Enter Your Name"
-                name="username"
-              />
+              <input type="text" id="exampleInputName" class="form-control input-shadow" placeholder="Enter Your Name"
+                name="username" />
               <div class="form-control-position">
                 <i class="icon-user"></i>
               </div>
@@ -35,13 +32,8 @@
           <div class="form-group">
             <label for="exampleInputEmailId" class="sr-only">Email ID</label>
             <div class="position-relative has-icon-right">
-              <input
-                type="text"
-                id="exampleInputEmailId"
-                class="form-control input-shadow"
-                placeholder="Enter Your Email"
-                name="email"
-              />
+              <input type="text" id="exampleInputEmailId" class="form-control input-shadow"
+                placeholder="Enter Your Email" name="email" />
               <div class="form-control-position">
                 <i class="icon-envelope-open"></i>
               </div>
@@ -50,36 +42,28 @@
           <div class="form-group">
             <label for="exampleInputPassword" class="sr-only">Password</label>
             <div class="position-relative has-icon-right">
-              <input
-                type="password"
-                id="exampleInputPassword"
-                class="form-control input-shadow"
-                placeholder="Your Password"
-                name="password"
-              />
+              <input type="password" id="exampleInputPassword" class="form-control input-shadow"
+                placeholder="Your Password" name="password" />
               <div class="form-control-position">
                 <i class="icon-lock"></i>
               </div>
             </div>
           </div>
 
-          <button
-            type="submit"
-            class="btn btn-light btn-block waves-effect waves-light"
-          >Sign Up</button>
+          <button type="submit" class="btn btn-light btn-block waves-effect waves-light">Sign Up</button>
+          <div class="error">{{error}}</div>
         </form>
       </div>
     </div>
     <div class="card-footer text-center py-3">
       <p class="text-warning mb-0">Already have an account?
-        <a href="/login"> Sign In here</a></p>
+        <a href="/login"> Sign In here</a>
+      </p>
     </div>
   </div>
 
   <!--Start Back To Top Button-->
-  <a href="javaScript:void();" class="back-to-top"><i
-      class="fa fa-angle-double-up"
-    ></i>
+  <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i>
   </a>
   <!--End Back To Top Button-->
 
@@ -121,4 +105,5 @@
   </div>
   <!--end color switcher-->
 
-</div><!--wrapper-->
+</div>
+<!--wrapper-->

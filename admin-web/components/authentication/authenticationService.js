@@ -11,6 +11,15 @@ exports.register = function (username, password, email) {
   });
 };
 
+exports.isUserExist = function (email) {
+  return admin.findOne({
+    where: {
+      email: email,
+    },
+    raw: true,
+  });
+};
+
 exports.verify = async function (email, password) {
   const user = await admin.findOne({ where: { email: email }, raw: true });
   if (!user) {
